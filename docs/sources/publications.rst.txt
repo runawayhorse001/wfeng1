@@ -22,7 +22,7 @@ Journal papers
 
 #. Lixiu Dong, **Wenqiang Feng**, Cheng Wang, Steven M. Wise and Zhengru Zhang. Convergence analysis and numerical implementation of a second order numerical schemes for the three-dimensional phase field crystal equation, Comput. Math. Appl., Accepted, 2017.
 
-#. Wenbin Chen, **Wenqiang Feng**, Yuan Liu, Cheng Wang, Steven M. Wise. A Second Order Energy Stable Scheme for the Cahn-Hilliard-Hele-Shaw Equations, arXiv preprint arXiv:1611.02967, 2016.
+#. Wenbin Chen, **Wenqiang Feng**, Yuan Liu, Cheng Wang, Steven M. Wise. A Second Order Energy Stable Scheme for the Cahn-Hilliard-Hele-Shaw Equations, Discrete Continuous Dyn. Syst. Ser. B, Accepted, 2017.
 
 #. **Wenqiang Feng**, Zhen Guan, John Lowengrub, Cheng Wang, Steven M. Wise. An Energy Stable Finite-Difference Scheme for the Functionalized Cahn-Hilliard Equation and its Convergence Analysis. arXiv preprint arXiv:1610.02473, 2016.
 
