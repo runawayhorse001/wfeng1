@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started &mdash; Learning Apache Spark with Python v1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Learning Apache Spark with Python v1.0 documentation" href="index.html"/>
+        <link rel="next" title="An Introduction to Apache Spark" href="introduction.html"/>
+        <link rel="prev" title="Why Spark with Python ?" href="why.html"/>
+ 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-168290-9']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="contents.html" class="icon icon-home"> Learning Apache Spark with Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="why.html">Why Spark with Python ?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#run-on-databricks-community-cloud">Run on Databricks Community Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-spark-on-mac-and-ubuntu">Set up Spark on Mac and Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyspark-with-text-editor-or-ide">PySpark With Text Editor or IDE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyspark-with-sublime-text">PySpark With Sublime Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyspark-with-eclipse">PySpark With Eclipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyspark-with-jupyter-notebook">PySpark With Jupyter Notebook</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-spark-on-cloud">Set up Spark on Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#demo-code-in-this-section">Demo Code in this Section</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">An Introduction to Apache Spark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdd.html">Programming with RDDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regression.html">Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classification.html">Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textmining.html">Text Mining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="socialnetwork.html">Social Network Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fnn.html">Neural Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Main Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="contents.html">Learning Apache Spark with Python</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="contents.html">Docs</a> &raquo;</li>
+        
+      <li>Getting Started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/gettingstarted.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<span id="gettingstarted"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Good tools are prerequisite to the successful execution
+of a job.</strong> &#8211; old Chinese proverb</p>
+</div>
+<p>A good programming platform can save you lots of troubles and time.
+Herein I will only present how to install my favorite programming
+platform and only show the easiest way which I know to set it up
+on Linux system. If you want to install on the other operator
+system, you can Google it. In this section, you may learn how to
+set up Pyspark on the corresponding programming platform and package.</p>
+<div class="section" id="run-on-databricks-community-cloud">
+<span id="index-0"></span><h2>Run on Databricks Community Cloud<a class="headerlink" href="#run-on-databricks-community-cloud" title="Permalink to this headline">¶</a></h2>
+<p>If you don&#8217;t have any experience with Linux or Unix operator
+system, I would love to recommend you to use Spark on Databricks
+Community Cloud. Since you do not need to setup the Spark and it&#8217;s
+totally <strong>free</strong> for Community Edition. Please follow the steps
+listed below.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Sign up a account at: <a class="reference external" href="https://community.cloud.databricks.com/login.html">https://community.cloud.databricks.com/login.html</a></li>
+</ol>
+<blockquote>
+<div><div class="figure align-center" id="fig-login">
+<img alt="_images/login.png" src="_images/login.png" />
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Sign in with your account, then you can creat your cluster(machine), table(dataset)
+and notebook(code).</li>
+</ol>
+<blockquote>
+<div><div class="figure align-center" id="fig-workspace">
+<img alt="_images/workspace.png" src="_images/workspace.png" />
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>Create your cluster where your code will run</li>
+</ol>
+<blockquote>
+<div><div class="figure align-center" id="fig-cluster">
+<img alt="_images/cluster.png" src="_images/cluster.png" />
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>Import your dataset</li>
+</ol>
+<blockquote>
+<div><div class="figure align-center" id="fig-table">
+<img alt="_images/table.png" src="_images/table.png" />
+</div>
+<div class="figure align-center" id="fig-dataset1">
+<img alt="_images/dataset1.png" src="_images/dataset1.png" />
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need to save the path which appears at Uploaded to DBFS:
+/FileStore/tables/05rmhuqv1489687378010/. Since we will use
+this path to load the dataset.</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li>Creat your notebook</li>
+</ol>
+<blockquote>
+<div><div class="figure align-center" id="fig-notebook">
+<img alt="_images/notebook.png" src="_images/notebook.png" />
+</div>
+<div class="figure align-center" id="fig-codenotebook">
+<img alt="_images/codenotebook.png" src="_images/codenotebook.png" />
+</div>
+</div></blockquote>
+<p>After finishing the above 5 steps, you are ready to run your
+Spark code on Databricks Community Cloud. I will run all the
+following demos on Databricks Community Cloud. Hopefully, when
+you run the demo code, you will get the following results:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span></span><span class="o">+---+-----+-----+---------+-----+</span>
+<span class="o">|</span><span class="n">_c0</span><span class="o">|</span>   <span class="n">TV</span><span class="o">|</span><span class="n">Radio</span><span class="o">|</span><span class="n">Newspaper</span><span class="o">|</span><span class="n">Sales</span><span class="o">|</span>
+<span class="o">+---+-----+-----+---------+-----+</span>
+<span class="o">|</span>  <span class="mi">1</span><span class="o">|</span><span class="mf">230.1</span><span class="o">|</span> <span class="mf">37.8</span><span class="o">|</span>     <span class="mf">69.2</span><span class="o">|</span> <span class="mf">22.1</span><span class="o">|</span>
+<span class="o">|</span>  <span class="mi">2</span><span class="o">|</span> <span class="mf">44.5</span><span class="o">|</span> <span class="mf">39.3</span><span class="o">|</span>     <span class="mf">45.1</span><span class="o">|</span> <span class="mf">10.4</span><span class="o">|</span>
+<span class="o">|</span>  <span class="mi">3</span><span class="o">|</span> <span class="mf">17.2</span><span class="o">|</span> <span class="mf">45.9</span><span class="o">|</span>     <span class="mf">69.3</span><span class="o">|</span>  <span class="mf">9.3</span><span class="o">|</span>
+<span class="o">|</span>  <span class="mi">4</span><span class="o">|</span><span class="mf">151.5</span><span class="o">|</span> <span class="mf">41.3</span><span class="o">|</span>     <span class="mf">58.5</span><span class="o">|</span> <span class="mf">18.5</span><span class="o">|</span>
+<span class="o">|</span>  <span class="mi">5</span><span class="o">|</span><span class="mf">180.8</span><span class="o">|</span> <span class="mf">10.8</span><span class="o">|</span>     <span class="mf">58.4</span><span class="o">|</span> <span class="mf">12.9</span><span class="o">|</span>
+<span class="o">+---+-----+-----+---------+-----+</span>
+<span class="n">only</span> <span class="n">showing</span> <span class="n">top</span> <span class="mi">5</span> <span class="n">rows</span>
+
+<span class="n">root</span>
+ <span class="o">|--</span> <span class="n">_c0</span><span class="p">:</span> <span class="n">integer</span> <span class="p">(</span><span class="n">nullable</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
+ <span class="o">|--</span> <span class="n">TV</span><span class="p">:</span> <span class="n">double</span> <span class="p">(</span><span class="n">nullable</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
+ <span class="o">|--</span> <span class="n">Radio</span><span class="p">:</span> <span class="n">double</span> <span class="p">(</span><span class="n">nullable</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
+ <span class="o">|--</span> <span class="n">Newspaper</span><span class="p">:</span> <span class="n">double</span> <span class="p">(</span><span class="n">nullable</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
+ <span class="o">|--</span> <span class="n">Sales</span><span class="p">:</span> <span class="n">double</span> <span class="p">(</span><span class="n">nullable</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="set-up-spark-on-mac-and-ubuntu">
+<span id="set-up-ubuntu"></span><span id="index-1"></span><h2>Set up Spark on Mac and Ubuntu<a class="headerlink" href="#set-up-spark-on-mac-and-ubuntu" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Installing Python</strong></li>
+</ul>
+<blockquote>
+<div><p>Go to Ubuntu Software Center and follow the following steps:</p>
+<ol class="arabic simple">
+<li>Open Ubuntu Software Center</li>
+<li>Search for python</li>
+<li>And click Install</li>
+</ol>
+<p>Or Open your terminal and  using the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo apt-get install build-essential checkinstall
+sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev
+             libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+sudo apt-get install python
+sudo easy_install pip
+sudo pip install ipython
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="pyspark-with-text-editor-or-ide">
+<h2>PySpark With Text Editor or IDE<a class="headerlink" href="#pyspark-with-text-editor-or-ide" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pyspark-with-sublime-text">
+<h3>PySpark With Sublime Text<a class="headerlink" href="#pyspark-with-sublime-text" title="Permalink to this headline">¶</a></h3>
+<p>After you finishing the above setup steps in <a class="reference internal" href="#set-up-ubuntu"><span class="std std-ref">Set up Spark on Mac and Ubuntu</span></a>,
+then you should be good to use Sublime Text to write your PySpark
+Code and run your code as a normal python code in Terminal.</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>python test_pyspark.py
+</pre></div>
+</div>
+</div></blockquote>
+<p>Then you should get the putput results in your terminal.</p>
+<blockquote>
+<div><div class="figure align-center" id="fig-sublimewithpyspark">
+<img alt="_images/sublimeWithPySpark.png" src="_images/sublimeWithPySpark.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="pyspark-with-eclipse">
+<h3>PySpark With Eclipse<a class="headerlink" href="#pyspark-with-eclipse" title="Permalink to this headline">¶</a></h3>
+<p>If you want to run PySpark code on Eclipse, you need to add the
+paths for the <strong>External Libraries</strong> for your <strong>Current Project</strong>
+as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Open the properties of your project</li>
+</ol>
+<blockquote>
+<div><div class="figure align-center" id="fig-pydevproperties">
+<img alt="_images/PyDevProperties.png" src="_images/PyDevProperties.png" />
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Add the paths for the <strong>External Libraries</strong></li>
+</ol>
+<blockquote>
+<div><div class="figure align-center" id="fig-pydevpath">
+<img alt="_images/pydevPath.png" src="_images/pydevPath.png" />
+</div>
+</div></blockquote>
+</div></blockquote>
+<p>And then you should be good to run your code on Eclipse with PyDev.</p>
+<blockquote>
+<div><div class="figure align-center" id="fig-pysparkwitheclipse">
+<img alt="_images/pysparkWithEclipse.png" src="_images/pysparkWithEclipse.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="pyspark-with-jupyter-notebook">
+<h3>PySpark With Jupyter Notebook<a class="headerlink" href="#pyspark-with-jupyter-notebook" title="Permalink to this headline">¶</a></h3>
+<p>After you finishing the above setup steps in <a class="reference internal" href="#set-up-ubuntu"><span class="std std-ref">Set up Spark on Mac and Ubuntu</span></a>,
+then you should be good to use write and run your PySpark Code
+in Jupyter notebook.</p>
+<blockquote>
+<div><div class="figure align-center" id="fig-jupyterwithpyspark">
+<img alt="_images/jupyterWithPySpark.png" src="_images/jupyterWithPySpark.png" />
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="set-up-spark-on-cloud">
+<span id="index-2"></span><h2>Set up Spark on Cloud<a class="headerlink" href="#set-up-spark-on-cloud" title="Permalink to this headline">¶</a></h2>
+<p>Folloing the setup steps in <a class="reference internal" href="#set-up-ubuntu"><span class="std std-ref">Set up Spark on Mac and Ubuntu</span></a>, you can set
+up your own cluster on the cloud, for example AWS, Google Cloud.
+Actually, for those clouds, they have their own Big Data tool.
+Yon can run them directly whitout any setting just like
+Databricks Community Cloud. If you want more details, please feel
+free to contact with me.</p>
+</div>
+<div class="section" id="demo-code-in-this-section">
+<h2>Demo Code in this Section<a class="headerlink" href="#demo-code-in-this-section" title="Permalink to this headline">¶</a></h2>
+<p>The code for this section is available for download <a class="reference external" href="_static/test_pyspark.py">test_pyspark</a>,</p>
+<ul class="simple">
+<li>Python Source code</li>
+</ul>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">## set up  SparkSession</span>
+<span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="k">import</span> <span class="n">SparkSession</span>
+
+<span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span> \
+    <span class="o">.</span><span class="n">builder</span> \
+    <span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">&quot;Python Spark SQL basic example&quot;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.some.config.option&quot;</span><span class="p">,</span> <span class="s2">&quot;some-value&quot;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;com.databricks.spark.csv&#39;</span><span class="p">)</span><span class="o">.</span>\
+                               <span class="n">options</span><span class="p">(</span><span class="n">header</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">,</span> \
+                               <span class="n">inferschema</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">)</span><span class="o">.</span>\
+                     <span class="n">load</span><span class="p">(</span><span class="s2">&quot;/home/feng/Spark/Code/data/Advertising.csv&quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>                     
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="introduction.html" class="btn btn-neutral float-right" title="An Introduction to Apache Spark" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="why.html" class="btn btn-neutral" title="Why Spark with Python ?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Wenqiang Feng.
+      Last updated on May 23, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'v1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+
+
+</body>
+</html>

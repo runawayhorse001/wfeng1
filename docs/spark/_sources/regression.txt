@@ -1,0 +1,94 @@
+
+.. _regression:
+
+==========
+Regression
+==========
+
+.. note::
+
+   A journey of a thousand miles begins with a single step -- old Chinese proverb
+
+
+The following is one of my favorite Cheat Sheet of the Data Mining Algorithms which was proposed by Laura Diane Hamilton on September 09, 2014 at http://www.lauradhamilton.com/machine-learning-algorithm-cheat-sheet. From this cheat sheet, you can have a basical idea of those algorithms. 
+
+.. table:: Cheat Sheet table of Data Mining Algorithms (Copyright belongs to Laura Diane Hamilton)
+
+ +-----------+----------------------------------+---------------------------------------------+----------------------------------------------------+
+ |  Algorithm|                **Pro**           |           **Cons**                          |          **Good at**                               |
+ +-----------+----------------------------------+---------------------------------------------+----------------------------------------------------+
+ |           |* Very fast(runs in constant time)| * Unable to model complex relationships     |*  The first look at a dataset                      |
+ | Linear    |* Easy to understand the model    | * Unable to capture nonlinear relationships |                                                    |
+ | regression|* Random Forest                   |   without first transforming the inputs     |* Numerical data with lots of features              |  
+ |           |* Less prone to overfitting       |                                             |                                                    |
+ |           |                                  |                                             |                                                    |
+ |           |                                  |                                             |                                                    |
+ +-----------+----------------------------------+---------------------------------------------+----------------------------------------------------+
+ |           |* Fast                            |* Complex trees are hard to interpret        |* Star classification                               |
+ |Decision   |* Robust to noise and             |* Duplication within the same sub-tree       |* Medical diagnosis                                 |
+ |tree       |  missing values                  |  is possible                                |* Credit risk analysis                              |
+ |           |* Accurate                        |                                             |                                                    |
+ +-----------+----------------------------------+---------------------------------------------+----------------------------------------------------+
+ |           |* Extremely powerful              | * Prone to overfitting                      |*  Images                                           |
+ | Neural    |* Can model even very complex     | * Long training time                        |*  Video                                            |
+ | networks  |  relationships                   | * Requires significant computing power for  |* "Human-intelligence" type tasks like              |  
+ |           |* No need to understand the       |   large datasets                            |  driving or flying                                 |
+ |           |  underlying data                 | * Model is essentially unreadable           |*  Robotics                                         |
+ |           |* Almost works by "magic"         |                                             |                                                    |
+ +-----------+----------------------------------+---------------------------------------------+----------------------------------------------------+
+ |           |                                  | * Need to select a good kernel function     |*  Classifying proteins                             |
+ |           |* Can model complex, nonlinear    | * Model parameters are difficult to         |*  Text classification                              |
+ |   SVM     |  relationships                   |   interpret                                 |*   Image classification                            |  
+ |           |* Robust to noise                 | * Sometimes numerical stability problems    |                                                    |
+ |           |  (because they maximize margins) | * Requires significant memory and           |*  Handwriting recognition                          |
+ |           |                                  |   processing power                          |                                                    |
+ +-----------+----------------------------------+---------------------------------------------+----------------------------------------------------+
+ |           |* Simple                          | * Expensive and slow to predict new         |* Low-dimensional datasets                          |
+ |           |* Powerful                        |   instances                                 |* Fault detection in semiconducter manufacturing    |
+ | kNN       |* No training involved (lazy)     | * Must define a meaningful distance         |* Video content retrieval                           |  
+ |           |* Naturally handles multiclass    |   function                                  |* Gene expression                                   |
+ |           |  classification and regression   | * Performs poorly on high-dimensionality    |* Protein-protein interaction                       |
+ |           |                                  |   datasets                                  |                                                    |
+ +-----------+----------------------------------+---------------------------------------------+----------------------------------------------------+
+
+
+
+Linear Regression
++++++++++++++++++
+
+Given that :math:`{\displaystyle \{y_{i},\,x_{i1},\ldots ,x_{ip}\}_{i=1}^{n}}`
+
+ .. code-block:: python
+
+	from pyspark.sql import SparkSession
+
+	spark = SparkSession \
+	    .builder \
+	    .appName("Python Spark Linear Regression Example") \
+	    .config("spark.some.config.option", "some-value") \
+	    .getOrCreate()
+
+
+
+Generalized linear regression
++++++++++++++++++++++++++++++
+
+Decision tree Regression
+++++++++++++++++++++++++
+
+Random Forest Regression
+++++++++++++++++++++++++
+
+
+Gradient-boosted tree regression
+++++++++++++++++++++++++++++++++
+
+
+
+.. _Spark vs. Hadoop MapReduce: https://www.xplenty.com/blog/2014/11/apache-spark-vs-hadoop-mapreduce/
+
+.. _Vipin Tyagi: https://www.quora.com/profile/Vipin-Tyagi-9
+.. _Yassine Alouini: https://www.quora.com/profile/Yassine-Alouini
+
+
+

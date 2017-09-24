@@ -1,0 +1,474 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Wenqiang Feng math@utk</title>
+  <meta name="description" content="Wenqiang Feng @ UTK" />
+  <meta name="keywords" content="wenqiang Feng, math, utk" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <!-- latex javascript -->
+  <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+  <script type="text/javascript">LatexIT.add('p',true);</script>
+  <link rel="UT ICON" href="ut">
+  <link rel="BOOKMARK" href="ut">
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <h1><a href="http://web.utk.edu/~wfeng1">Wenqiang Feng</a></h1>
+        <div class="slogan"><a href="http://www.math.utk.edu/">Department of Mathematics</a></div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publication.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="note.html">Notes</a></li>
+          <li><a href="biography.html">Biography</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <img class="paperclip" src="style/paperclip.png" alt="paperclip" />
+        <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        
+         <h3>Contents</h3>
+        <ol>
+        <li><a href="#sec1">MPI Installation</a></li>
+            <ul>
+              <li>OpenMPI Installation</li>
+              <li>MPICH Installation</li>
+              <li>Intel MPI Installation</li>
+            </ul>
+        <li><a href="#sec2">Compile and Run</a></li>
+            <ul>
+              <li>Run a single-file</li>
+              <li>Run a multi-file code</li>
+              <li>run on sever</li>
+            </ul>
+	<li><a href="#sec3">Demos</a></li>
+    <ul>
+    <li><a href="code/demo_hello.tar.gz">Hello Word</a></li>
+    <li><a href="code/demo_pack.tar.gz">Pack and Unpack</a></li>
+    <li><a href="code/demo_pack_vec.tar.gz">Pack and Unpack with vector format</a></li>
+    <li><a href="code/demo_send_recv.tar.gz">Send and Recv</a></li>
+    <li><a href="code/demo_barrier.tar.gz">Barrier</a></li>
+    <li><a href="code/demo_barrier_bdry.tar.gz">Barrier with boundary points</a></li>
+    <li><a href="code/demo_hello.tar.gz">1d FVM demo</a></li>
+    <li><a href="code/2Dparallel.tar.gz">2d FVM  demo</a></li>
+    </ul>
+        <li><a href="#sec4">Reference</a></li>
+        </ol>
+
+        </div>
+ 
+        <img class="paperclip" src="style/paperclip.png" alt="paperclip" />
+        <div class="sidebar">
+          <h3> </h3>
+          <div id="clustrmaps-widget"></div>
+          <script type="text/javascript">var _clustrmaps = {'url' : 'http://web.utk.edu/~wfeng1/', 'user' : 1108651, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2013-08-20', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/91310eaab"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/web.utk.edu-~wfeng1--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript></p>
+        </div>
+      </div>
+    
+      <div id="content">
+        <!-- insert the page content here -->
+        <h2 align="center">MPI FORTRAN programing with MPICH AND Intel MPI</h2>
+        
+        <P>You might get all the following information in <a href="doc/mpi_tutorial.pdf">PDF</a> format.</p>
+        <h3 id="sec1">MPI Installation</h3>
+
+       <ul>The following steps explain how to install MPI on 64-bit Ubuntu 14.04 and 
+       15.04 Linux. Since Intel has its own MPI package, I installed OpenMPI and MPICH first. 
+       I have  tested them on my Thinkpad W-541 with gfortran and Ifort. 
+       Intel Fortran is free for students. And it has may nice features: 
+       much more stable, much more efficient and
+       has more debug flag than gfortran. Moreover, the installation is super easy. If you are a student, I strongly
+       recommend you to install Intel Fortran. It will save a lot of time when you debug.</ul>
+        <ol>
+            <li>OpenMPI Installation</li>
+           
+        <ul>
+          <li>Download the package: http://www.open-mpi.org/software/ompi/v1.10/</li>
+            
+            <li>Unpack the downloaded file</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ tar -xvf openmpi-1.8.1.tar.gz</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ cd openmpi-1.8.1</span></td></tr>
+        	</table>
+	
+            <li>Configure the installation file</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	ubuntu:$ ./configure --prefix="/home/$USER/.openmpi"</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	Mac: $./configure --prefix=/usr/local</span></td></tr>
+        	</table>
+        	
+          <li>Install OpenMPI (This path will take time to complete)</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ make</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ sudo make install</span></td></tr>
+        	</table>
+          
+          <li>Setup path in Environment Variable</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ vim ~/.bashrc</span></td></tr>
+        	</table>
+        	<p> add the following lines to .bashrc</p>
+        	<table style="width:100%; border-spacing:0;">
+          	<tr><th>.bashrc</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	export PATH="$PATH:/home/$USER/.openmpi/bin"</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/$USER/.openmpi/lib/"</span></td></tr>         	
+        	</table>
+        	
+        	<li>Test if installation was successful</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ mpirun</span></td></tr>
+        	</table>
+
+        	<li>Find link path</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ which mpirun</span></td></tr>
+         	<tr><td><span class="label label bf_label_style"> 
+         	result: $ /home/feng/.openmpi/bin/mpirun</span></td></tr>
+        	</table>
+        	</table>
+        </ul>
+        
+        <li>MPICH Installation (My default mpi)</li>
+           
+        <ul>
+          <li>Download the package: https://www.mpich.org/</li>
+            
+            <li>Unpack the downloaded file</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ tar -vxf mpich_3.0.4.orig.tar.gz</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ cd mpich-3.0.4</span></td></tr>
+        	</table>
+	
+            <li>Configure the installation file</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	ubuntu:$ ./configure</span></td></tr>
+        	</table>
+        	
+          <li>Install OpenMPI (This path will take time to complete)</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ make</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ sudo make install</span></td></tr>
+        	</table>
+          
+        	
+        	<li>Test if installation was successful</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ mpirun</span></td></tr>
+        	</table>
+
+        	<li>Find link path</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ which mpirun</span></td></tr>
+         	<tr><td><span class="label label bf_label_style"> 
+         	result: $ /usr/local/bin/mpirun</span></td></tr>
+        	</table>
+        </ul>
+ 
+         <li>Intel MPI Installation</li>
+           
+        <ul>
+          <li>Download the package: https://software.intel.com/en-us/qualify-for-free-software</li>
+            
+            <li>Unpack the downloaded file</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ tar -xvf parallel_studio_xe_2016_update1.tgz</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ cd parallel_studio_xe_2016_update1</span></td></tr>
+        	</table>
+	
+            <li>Configure the installation file</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ sudo ./install.sh</span></td></tr>
+        	</table>
+        	
+          <li>Setup path in Environment Variable</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ vim ~/.bashrc</span></td></tr>
+        	</table>
+        	<p> add the following lines to .bashrc</p>
+        	<table style="width:100%; border-spacing:0;">
+          	<tr><th>.bashrc</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	source /opt/intel/bin/compilervars.sh intel64</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	export PATH=$PATH:/opt/intel/bin</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/lib/intel64</span></td></tr>         	
+        	</table>
+          
+        	
+        	<li>Test if installation was successful</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ mpirun</span></td></tr>
+        	</table>
+
+        	<li>Find link path</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ which mpirun</span></td></tr>
+         	<tr><td><span class="label label bf_label_style"> 
+         	result: $ /opt/intel/compilers_and_libraries_2016.1.150/linux/mpi/intel64/bin/mpirun</span></td></tr>
+        	</table>
+        </ul>
+        </ol>
+        <h3 id="sec2">Compile and Run MPI Programs in Fortran</h3>
+        <ol>               
+            <li>Run a single-file code </li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command (compile):</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ mpif90 name.f90</span></td></tr>
+		    </table>
+		    <table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command (run):</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ mpirun -np 4 ./a.out</span></td></tr>
+		    </table>
+			<li>Run a multi-file code (Makefile)</li>
+			        	</table>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Makefile (verison 1)</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	#---------------------- Makefile for parallel -------------------------#<br>                                                      
+		    #     usage: make compile ; make run or make pbs                       #<br>
+            #----------------------------------------------------------------------#<br>
+
+
+		#============================= set MPI, compiler ======================#<br> 
+         #If your compiler is NOT on your path (for your shell) then#<br>
+you need to insert the full path, e.g. /opt/intel/..../bin/ifort<br>
+##-----> set appropriate compiler_wrapper: mpif77 mpif90 mpicc mpic++<br>
+COMP = $(MPI)/bin/mpif90<br>
+##-----> set appropriate extension: f c cpp<br>
+EXT= f90<br>
+LFLAGs =<br>
+#for C: LFLAGs = -lm<br>
+##-------------------------- for all:<br>
+FLAGs = -g $(MPIlnk)<br>
+# FLAGs = -O3 $(MPIlnk)<br>
+MPIlnk = -I$(MPI)/include -L $(MPI)/lib<br>
+##---------------------> set path to openMPI on local:<br>
+MPI = /usr/local<br>
+#<br>
+#=========================== set source code =========================#<br>
+##--------------->set names for your PROGram and std I/O files:<br>
+PROG = code2D<br>
+INPUT = ./inputdata.dat<br>
+OUTPUT = out<br>
+##--------------------> set code components:<br>
+CODE_o = main.o mainMR.o mainWR.o io.o setup.o update.o messaging.o<br>
+#-==========================create executable: make compile ==========#<br>
+#------------> lines below a directive MUST start with TAB <-----------#<br>
+$(CODE_o):%.o: %.$(EXT)<br>
+$(COMP) $(FLAGs) -c $< -o $@<br>
+compile:$(CODE_o)<br>
+# $(COMP) $(FLAGs) $(CODE_o) -o $(PROG).x $(LFLAGs)<br>
+$(COMP) $(FLAGs) $(CODE_o) -o $(PROG) $(LFLAGs)<br>
+@echo " >>> compiled on ‘hostname -s‘ with $(COMP) <<<"<br>
+#----------------------- execute: make run --------------------------#<br>
+run:<br>
+# $(MPI)/bin/mpiexec -n 2 ./$(PROG).x < $(INPUT) > $(OUTPUT)<br>
+# $(MPI)/bin/mpirun -np 2 ./$(PROG).x < $(INPUT) > $(OUTPUT)<br>
+$(MPI)/bin/mpirun -np 5 ./$(PROG) < $(INPUT)<br>
+#----------------------- execute: make pbs --------------------------#<br>
+pbs:<br>
+@ vi PBSscript<br>
+<br>
+make clean<br>
+         qsub  PBSscript<br>
+        #-------------------------- clean  -----------------------------------#<br>
+        clean:<br>
+         rm -f  o.*  DONE *.o watch<br>
+        #----------------------------------------------------------------------#<br>                
+</span></td></tr>
+</table>
+
+</table>
+<table style="width:100%; border-spacing:0;">
+	<tr><th>Makefile (verison 2)</th></tr>
+<tr><td><span class="label label bf_label_style"> 
+
+        #---------------------- Makefile for parallel -------------------------#<br>
+        #       usage:  make  ;  make run  or  make pbs<br>
+        #----------------------------------------------------------------------#<br>
+        #============================= set MPI, compiler ======================#<br>
+        #If your compiler is NOT on your path (for your shell) then<br>
+        #   you need to insert the full path, e.g. /opt/intel/..../bin/ifort<br>
+        ##-----> set appropriate compiler_wrapper: mpif77 mpif90 mpicc mpic++<br>
+        FOR = mpif90 -IMODF -JMODF<br>
+        ##---------------------> set path to openMPI on local:<br>
+        EXE = lab9<br>
+        OUTPUT = OUT/out<br>
+        # OBJ has order<br>
+        OBJ = OF/io.o OF/update.o OF/setup.o  OF/messaging.o OF/mainWR.o OF/mainMR.o OF/main.o<br>
+        #-==========================create executable: make compile ==========#<br>
+        $(EXE): $(OBJ)<br>
+         $(FOR) $(OBJ) -o $(EXE)<br>
+        ##-------------------- set code components:---------------------------#<br>
+        OF/io.o: io.f90<br>
+         $(FOR) -c io.f90 -o OF/io.o<br>
+         <br>
+        OF/setup.o: setup.f90<br>
+         $(FOR) -c setup.f90 -o OF/setup.o<br>
+         <br>
+        OF/update.o: update.f90<br>
+         $(FOR) -c update.f90 -o OF/update.o<br>
+         <br>
+        OF/messaging.o: messaging.f90<br>
+         $(FOR) -c messaging.f90 -o OF/messaging.o<br>
+         <br>
+        OF/mainWR.o: mainWR.f90<br>
+         $(FOR) -c mainWR.f90 -o OF/mainWR.o<br>
+         <br>
+        OF/mainMR.o: mainMR.f90<br>
+         $(FOR) -c mainMR.f90 -o OF/mainMR.o<br>
+         <br>
+        OF/main.o: main.f90<br>
+         $(FOR) -c main.f90 -o OF/main.o<br>
+         <br>
+         
+         #------------ lines below a directive MUST start with TAB -----------#<br>
+          #----------------------- execute: make run --------------------------#<br>
+          run:<br>
+           @mpirun -np 5 ./$(EXE) < inputdata.dat> $(OUTPUT)<br>
+          #----------------------- execute: make pbs --------------------------#<br>
+          pbs:<br>
+           @ vi PBSscript<br>
+           make clean<br>
+           qsub  PBSscript<br>
+          #-------------------------- clean  -----------------------------------#<br>
+          reset:<br>
+           rm $(EXE) MODF/* OF/* ./*.mod<br>
+          remove:<br>
+           rm OUT/*.dat<br>               
+</span></td></tr>
+</table>
+
+<li>PBS script (run on sever)</li>
+<p>The following is my PBS script for Darter which is maintained 
+by National Institute for Computational Sciences (NICS) at the University of Tennessee. </p>
+
+</table>
+<table style="width:100%; border-spacing:0;">
+	<tr><th>PBS script</th></tr>
+<tr><td><span class="label label bf_label_style"> 
+#!/bin/bash<br>
+   #PBS -A UT-TNEDU029<br>
+   #PBS -l walltime=00:10:00<br>
+   #PBS -l size=16<br>
+   #PBS -N 1D_para<br>
+   #PBS -j oe<br>
+   #PBS -M youremail@utk.edu<br>
+   cd $PBS_O_WORKDIR<br>
+   aprun -n 3 ./lab9 < inputdata.dat > out-log  # execution	<br>
+</span></td></tr>
+</table>
+
+
+	<ul>
+		<li>The first line in the file identifies which shell will be used for the job. In this example, bash is used but csh or other valid shells would also work.</li>
+		<li>The second line in the file specifies the account name.</li>
+		<li>The third line in the file states how much wall-clock time is being requested. In this example 10 minutes of wall time have been requested.</li>
+		<li>The fourth line specifies the number of nodes and processors desired for this job. In this example, 16 processors is being requested. For some HPC may use (#PBS -l nodes=1:ppn=2) which means one node with two processors is being requested.</li>
+		<li>The fifth line tells the cluster what’s the name of the job instead of the name of the job script.</li>
+		<li>The sixth line ombines standard output and standard error into the standard error file (eo) or the standard out file (oe).</li>
+		<li>The seventh line tells the cluster to send the notice to your email account. You will get the notification by email when the jobs have been started or finished.</li>
+		<li>The eighth line tells the HPC cluster to access the directory where the data is located for this job. In this example, the cluster is instructed to change the directory to the PBS_O_WORKDIR directory.</li>
+		<li>The ninth line tells the cluster to run the program. In this example, it runs mpif90 with 3 processors on Dater, specifying lab as the argument in the current directory, with input data file inputdata.dat and output data file out-log.</li>
+	</ul			
+		</ul>
+        </ol>
+        
+        <h3 id="sec3">Demos (Download From Here)</h3>
+        <ol>
+            <li><a href="code/demo_hello.tar.gz">Hello Word</a></li>
+            <li><a href="code/demo_pack.tar.gz">Pack and Unpack</a></li>
+            <li><a href="code/demo_pack_vec.tar.gz">Pack and Unpack with vector format</a></li>
+            <li><a href="code/demo_send_recv.tar.gz">Send and Recv</a></li>
+            <li><a href="code/demo_barrier.tar.gz">Barrier</a></li>
+            <li><a href="code/demo_barrier_bdry.tar.gz">Barrier with boundary points</a></li>
+            <li><a href="code/demo_hello.tar.gz">1d FVM demo</a></li>
+            <li><a href="code/2Dparallel.tar.gz">2d FVM  demo</a></li>
+
+
+        </ol>
+
+        
+	<h3 id="sec4">Reference</h3>
+        <ol>
+		<li><a href="http://www.noobslab.com/2014/12/use-nvidia-graphics-drivers-in.html">Use Nvidia Graphics Drivers In Ubuntu/Linux Mint For Best Performance</a></li>
+		<li><a href="http://www.r-tutor.com/gpu-computing/cuda-installation/cuda7.0-ubuntu">Installing CUDA Toolkit 7.0 on Ubuntu 14.04 Linux</a></li>
+	</ol>
+      </div>
+    </div>
+    <div id="footer">
+      <p>Copyright &copy; Wenqiang Feng| <a href="http://www.html5webtemplates.co.uk">CSS from HTML5webtemplates.co.uk</a></p>
+      <p> Last updated:
+         <!--<script type="text/javascript">
+          var d = new Date()
+          document.write(d.getMonth() + 1)
+          document.write(".")
+          document.write(d.getDate())
+          document.write(".")
+          document.write(d.getFullYear())
+          </script>-->
+         <script>
+             document.write(document.lastModified);
+         </script>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+.. _rdd:
+
+=====================
+Programming with RDDs
+=====================
+
+.. note::
+
+   Sharpening the knife longer can make it easier to hack the firewood -- old Chinese proverb
+
+
+An RDD in Spark is simply an immutable distributed collection of objects. Each RDD
+is split into multiple partitions, which may be computed on different nodes of the
+cluster.
+
+Once created, RDDs offer two types of operations: transformations and actions.
+
+
+Spark Transformations
++++++++++++++++++++++
+
+Transformations construct a new RDD from a previous one. For example, one common
+transformation is filtering data that matches a predicate.
+
+
+Spark Actions
++++++++++++++
+
+Actions, on the other hand, compute a result based on an RDD, and either return it to
+the driver program or save it to an external storage system (e.g., HDFS).
+
+
+.. _Spark vs. Hadoop MapReduce: https://www.xplenty.com/blog/2014/11/apache-spark-vs-hadoop-mapreduce/
+
+.. _Vipin Tyagi: https://www.quora.com/profile/Vipin-Tyagi-9
+.. _Yassine Alouini: https://www.quora.com/profile/Yassine-Alouini
+
+
+

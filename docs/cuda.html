@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Wenqiang Feng math@utk</title>
+  <meta name="description" content="Wenqiang Feng @ UTK" />
+  <meta name="keywords" content="wenqiang Feng, math, utk" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <!-- latex javascript -->
+  <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+  <script type="text/javascript">LatexIT.add('p',true);</script>
+  <link rel="UT ICON" href="ut">
+  <link rel="BOOKMARK" href="ut">
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <h1><a href="http://web.utk.edu/~wfeng1">Wenqiang Feng</a></h1>
+        <div class="slogan"><a href="http://www.math.utk.edu/">Department of Mathematics</a></div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publication.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="note.html">Notes</a></li>
+          <li><a href="biography.html">Biography</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <img class="paperclip" src="style/paperclip.png" alt="paperclip" />
+        <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        
+         <h3>Contents</h3>
+        <ol>
+        <li><a href="#sec1">Nvidia Drivers Installation</a></li>
+            <ul>
+              <li>Driver Installation</li>
+              <li>Fix bugs</li>
+              <li>My xorg.conf</li>
+            </ul>
+        <li><a href="#sec2">Cuda Installation</a></li>
+            <ul>
+              <li>CUDA Repository</li>
+              <li>CUDA Toolkit</li>
+              <li>CUDA Environment</li>
+              <li>Install CUDA SDK samples</li>
+            </ul>
+	<li><a href="#sec3">Verification of the Installation</a></li>
+        <li><a href="#sec4">Reference</a></li>
+        </ol>
+
+        </div>
+ 
+        <img class="paperclip" src="style/paperclip.png" alt="paperclip" />
+        <div class="sidebar">
+          <h3> </h3>
+          <div id="clustrmaps-widget"></div>
+          <script type="text/javascript">var _clustrmaps = {'url' : 'http://web.utk.edu/~wfeng1/', 'user' : 1108651, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2013-08-20', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/91310eaab"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/web.utk.edu-~wfeng1--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript></p>
+        </div>
+      </div>
+    
+      <div id="content">
+        <!-- insert the page content here -->
+        <h2 align="center">GPU programing with CUDA</h2>
+        <h3 id="sec1">Nvidia Drivers Installation</h3>
+
+       <ul>The following steps explain how to install Nvidia Driver on 64-bit Ubuntu 14.04 and 15.04 Linux. Because of the dual graphy cards, sometimes it is a little bit tricky and annoyed for this part. I have  tested it on my Thinkpad W-541 with NVIDIA Quadro K2100M. </ul>
+        <ol>
+            <li>Driver Installation</li>
+            <p>I strongly recommend you to update the nivida driver through the<span class="label label bf_label_style"> Software & Update-->Additional Drivers</span>, otherwise fixing bugs will be very tricky. For Ubuntu Operator System, Different version of drivers available for NVIDIA cards which is managed in xorg-edgers PPA, you need to chose the proper driver.You might follw exactly the following stpes:</p>
+        <ul>
+          <li>Add xorg-edgers repository</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ sudo add-apt-repository ppa:xorg-edgers/ppa</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ sudo apt-get update</span></td></tr>
+        	</table>
+
+          <li>Install the proper Driver</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Additional Drivers Method:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	a. Software & Update-->Additional Drivers</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	b. Click the driver with (proprietary, tested)</span></td></tr>
+		<tr><td><span class="label label bf_label_style"> 
+         	c. Apply Changes</span></td></tr>
+        	</table>
+		<p>>>Proper Drivers categories: 352.xx drivers (Only for Ubuntu 15.10/15.04/14.04);
+		346.xx drivers (For Ubuntu 15.10/15.04/14.04/12.04);
+		340.xx drivers (For Ubuntu 15.04/12.04);
+		331.xx drivers (For Ubuntu 15.04/14.04/12.04);
+		304.xx drivers (For Ubuntu 15.04/14.04/12.04)</p>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ sudo apt-get install nvidia-xxx nvidia-settings</span></td></tr>
+        	</table>
+          <li>Reboot</li>
+        </ul>
+        
+            <li>Fix bugs (Screen Blanks/Monitor Turns Off)</li>
+		<p>This is most tricky part in the installation. I figured out the following simple 			way to fixed it.
+                </p>
+		<ul>
+			<li>login from recovery mode</li>
+			<li>reboot from the recovery mode</li>
+			<li>Switch to the console by using 
+                           <span class="label label bf_label_style"> Fn+CTRL+ALT+F1</span> or use recovery edit mode</li>
+			<li>Open and edit xorg.conf</li>
+          			<table style="width:100%; border-spacing:0;">
+          			<tr><th>Terminal Command:</th></tr>
+          			<tr><td><span class="label label bf_label_style"> 
+         			$ sudo vi /etc/X11/xorg.conf</span></td></tr>
+		        	</table>
+			<li>Insert a new line: <span class="label label bf_label_style">Option 					"UseDisplayDevice" "DFP"</span></li>
+			<li>Save and reboot</li>
+          			<table style="width:100%; border-spacing:0;">
+          			<tr><th>Terminal Command:</th></tr>
+          			<tr><td><span class="label label bf_label_style"> 
+         			$ sudo reboot</span></td></tr>
+		        	</table>
+		</ul>
+            <li>My xorg.conf</li>
+<table style="width:100%; border-spacing:0;">
+	<tr><th>xorg.conf</th></tr>
+	<tr><td><span class="label label bf_label_style">Section "ServerLayout"<br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Identifier "layout"<br>
+    	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Screen 0 "nvidia"<br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Inactive "intel"<br>
+EndSection</span></td></tr>
+	<tr><td><span class="label label bf_label_style">Section "Device"<br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Identifier "intel"<br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Driver "intel"<br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp BusID "PCI:0@0:2:0"<br>
+   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Option "AccelMethod" "SNA"<br>
+EndSection</span></td></tr>
+<tr><td><span class="label label bf_label_style">Section "Screen"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    Identifier "intel"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    Device "intel"<br>
+EndSection</span></td></tr>
+<tr><td><span class="label label bf_label_style">Section "Device"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     Identifier "nvidia"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     Driver "nvidia"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     BusID "PCI:1@0:0:0"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     Option "ConstrainCursor" "off"<br>
+EndSection</span></td></tr>
+<tr><td><span class="label label bf_label_style">Section "Screen"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     Identifier "nvidia"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     Device "nvidia"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     Option "AllowEmptyInitialConfiguration" "on"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     Option "IgnoreDisplayDevices" "CRT"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     Option "UseDisplayDevice" "DFP"<br>
+EndSection</span></td></tr>
+</table>
+        </ol>
+        <h3 id="sec2">Cuda Installation</h3>
+        <ol>
+            <li>CUDA Repository</li>
+        <div class="lstlisting" id="listing-7">
+        <span class="label label bf_label_style"> 
+         $&nbsp;sudo&nbsp;dpkg&nbsp;-i&nbsp;cuda-repo-ubuntu1404-7-0-local_7.0-28-28_amd64.deb&nbsp;
+        </span> <br>
+        <span class="label label bf_label_style">$&nbsp;sudo&nbsp;apt-get&nbsp;update</span>
+      </div><p></p>  
+
+            <li>CUDA Toolkit</li>
+<p>Then you can install the CUDA Toolkit using apt-get.</p>
+
+     <div class="lstlisting" id="listing-8"><span class="label bf_label_style">$&#x00A0;sudo&#x00A0;apt-get&#x00A0;install&#x00A0;cuda</span></div> <p></p>
+            <li>CUDA Environment</li>
+           <p>As part of the CUDA environment, you should add the following in the <span class="label bf_label_style">.bashrc </span>file of  your home folder.</p>
+	<ul>
+		<li>Open and edit .bashrc</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ vim ~/.bashrc</span></td></tr>
+		</table>
+		<li>add lines to .bashrc</li>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>.bashrc:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	# cuda environment <br>
+		export CUDA_HOME=/usr/local/cuda-7.0<br> 
+		export LD_LIBRARY_PATH=${CUDA_HOME}/lib64<br> 
+                                            <br>
+		PATH=${CUDA_HOME}/bin:${PATH} <br>
+		export PATH
+		</span></td></tr>
+		</table>
+	</ul>
+            <li>Install CUDA SDK samples</li>
+             <p>Open a new terminal, now you can copy the SDK samples into your home directory.</p>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ cuda-install-samples-7.0.sh ~</span></td></tr>
+        	</table>
+        </ol>
+
+        <h3 id="sec3">Verification of the Installation</h3>
+            <p>You can use use the samples under <span class="label label bf_label_style"> 
+             ~/NVIDIA_CUDA-7.0_Samples</span> or the attached my
+            simple cuda c code  to verify your installation</p>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ cd ~/NVIDIA_CUDA-7.0_Samples/0_Simple/matrixMul
+                </span></td></tr>
+		<tr><td><span class="label label bf_label_style"> 
+         	$ make </span></td></tr>
+        	</table>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>My simple test code:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	#include &ltcuda_runtime.h&gt; <br>                                                      
+		#include &ltstdio.h&gt<br> <br> <br> 
+
+
+		__global__ void kernelAdd(int *d_a, int *d_b, int *d_c)<br> 
+		{<br> 
+		  unsigned const int idx = threadIdx.x;<br> 
+		    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   d_c[idx] = d_b[idx] + d_a[idx];<br> 
+		    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   //printf("idx %d\n",idx);<br> 
+		}<br> 
+
+		int main()<br> 
+		{<br> 
+		    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  int a, b, c;  //variables on host<br> 
+		    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int *d_a, *d_b, *d_c; // pointers on device<br> 
+		    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp int length = 1;  <br> 
+
+		   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  /* Allocate space for device pointers of a, b, c */<br> 
+		   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  cudaMalloc((void **)&d_a, length*sizeof(int));<br> 
+		   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  cudaMalloc((void **)&d_b, length*sizeof(int));<br> 
+		   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  cudaMalloc((void **)&d_c, length*sizeof(int));<br> 
+
+		   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  a = 3;  <br> 
+		   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  b = 5;  <br> 
+
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp /* Copy inputs from host to device */<br> 
+		 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    cudaMemcpy(d_a, &a, length*sizeof(int), cudaMemcpyHostToDevice);<br> 
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   cudaMemcpy(d_b, &b, length*sizeof(int), cudaMemcpyHostToDevice);<br> 
+		    
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   /*Launch kernelAdd() kernel on GPU*/<br> 
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   kernelAdd<<<1, 1>>>(d_a, d_b, d_c);<br>  
+
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   /*Copy result from device to host*/<br> 
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   cudaMemcpy(&c, d_c, length*sizeof(int), cudaMemcpyDeviceToHost);<br> 
+		    
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   printf("c is %d\n", c); <br> 
+
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   /*Release memory */<br> 
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   cudaFree(d_a);<br> 
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   cudaFree(d_b);<br> 
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   cudaFree(d_c);<br> 
+		    
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   return 0; <br>  
+
+		}<br> 
+                </span></td></tr>
+        	</table>
+          	<table style="width:100%; border-spacing:0;">
+          	<tr><th>Terminal Command:</th></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ nvcc -o test test.cu</span></td></tr>
+          	<tr><td><span class="label label bf_label_style"> 
+         	$ ./test </span></td></tr>
+		</table>
+	<h3 id="sec4">Reference</h3>
+        <ol>
+		<li><a href="http://www.noobslab.com/2014/12/use-nvidia-graphics-drivers-in.html">Use Nvidia Graphics Drivers In Ubuntu/Linux Mint For Best Performance</a></li>
+		<li><a href="http://www.r-tutor.com/gpu-computing/cuda-installation/cuda7.0-ubuntu">Installing CUDA Toolkit 7.0 on Ubuntu 14.04 Linux</a></li>
+	</ol>
+      </div>
+    </div>
+    <div id="footer">
+      <p>Copyright &copy; Wenqiang Feng| <a href="http://www.html5webtemplates.co.uk">CSS from HTML5webtemplates.co.uk</a></p>
+      <p> Last updated:
+         <!--<script type="text/javascript">
+          var d = new Date()
+          document.write(d.getMonth() + 1)
+          document.write(".")
+          document.write(d.getDate())
+          document.write(".")
+          document.write(d.getFullYear())
+          </script>-->
+         <script>
+             document.write(document.lastModified);
+         </script>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
