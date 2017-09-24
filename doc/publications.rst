@@ -5,7 +5,7 @@
  Publications
 =============
 
-My google scholar citations at Google Scholar.
+My google scholar citations at `Google Scholar`_.
 
 Journal papers
 ++++++++++++++
@@ -60,8 +60,6 @@ Thesis
 
 .. _Google Scholar: https://scholar.google.com/citations?user=bno_RCwAAAAJ&hl=en
 
-.. _Vipin Tyagi: https://www.quora.com/profile/Vipin-Tyagi-9
-.. _Yassine Alouini: https://www.quora.com/profile/Yassine-Alouini
 
 
 
