@@ -1,499 +1,299 @@
-<!DOCTYPE HTML>
-<html>
 
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>Wenqiang Feng math@utk</title>
-  <meta name="description" content="Wenqiang Feng @ UTK" />
-  <meta name="keywords" content="wenqiang Feng, math, utk" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1" />
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" />
-  <!-- latex javascript -->
-  <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-  <script type="text/javascript">LatexIT.add('p',true);</script>
-  <link rel="UT ICON" href="ut">
-  <link rel="BOOKMARK" href="ut">
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Research &mdash; Wenqiang Feng PhD@math v1.01 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Wenqiang Feng PhD@math v1.01 documentation" href="index.html"/>
+        <link rel="next" title="Publications" href="publications.html"/>
+        <link rel="prev" title="Contents" href="index.html"/>
+ 
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-168290-9']);
+  _gaq.push(['_trackPageview']);
+</script>
+
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
 </head>
 
-<body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <h1><a href="http://web.utk.edu/~wfeng1">Wenqiang Feng</a></h1>
-        <div class="slogan"><a href="http://www.math.utk.edu/">Department of Mathematics</a></div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="current" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="http://web.utk.edu/~wfeng1">Home</a></li>
-          <li class="current"><a href="research.html">Research</a></li>
-          <li><a href="publication.html">Publications</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="note.html">Notes</a></li>
-          <li><a href="biography.html">Biography</a></li>
-        </ul>
-      </div>
-    </div>
-    <div id="site_content">
-      <div id="sidebar_container">
-        <img class="paperclip" src="style/paperclip.png" alt="paperclip" />
-        <div class="sidebar">
-        <!-- insert your sidebar items here -->
-               <h3>Contents</h3>
-        <ol>
-			<li><a href="#sec1">Research Interests</a></li>
-		<ul>
-            <li>Numerical Methods For Phase-Field Equation</li>
-            <li>Geometric and Algebraic Multigrid Solver</li>
-            <li>Continuous and Discoutinuous Glerkin Method</li>
-            <li>Immersed and Adaptive Finite Element Method</li>
-            <li>Pseudospectral Method</li>
-            <li>Image Denoising</li>
-        </ul>
-			<li><a href="#sec2">Projects for fun</a></li>
-			 <ul>
-              <li>Triangularization on Tvols</li>
-              <li>One in Two out Navier-Stokes flows on Tvols</li>
-            </ul>
-             <li><a href="#sec3">My Research Projects Description</a></li>
-            <ul>
-              <li><a href="#ac">Simulation for Allen-Cahn Euqaiton</a></li>
-              <li><a href="#ch">Simulation for Cahn-Hilliard Euqaiton</a></li>
-              <li><a href="#fch">Simulation for Functionalized Cahn-Hilliard Euqaiton</a></li>
-              <li><a href="#sh">Simulation for Swift-Hohenberg equation</a></li>
-              <li><a href="#pfc">Simulation for Phase Field Crystal (PFC) equation</a></li>
-              <li><a href="#spfc">Simulation for Squared Phase Field Crystal (SPFC) equation</a></li>
-              <li><a href="#etf">Simulation for Epitaxial thin film growth model</a></li>
-              <li><a href="#dwdg">Dual-Wind Discontinuous Galerkin Method</a></li>
-              <li><a href="#ifem">Immersed Finite Element Method</a></li>
-              <li><a href="#mg">Geometric and Algebraic Multigrid Solver</a></li>
-              <li><a href="#afem">Adaptive Finite Element Method</a></li>
-            </ul>
-        </ol>
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Wenqiang Feng PhD@math
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.01
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
         </div>
-        <img class="paperclip" src="style/paperclip.png" alt="paperclip" />
-        <div class="sidebar">
-          <h3> </h3>
-          <div id="clustrmaps-widget"></div>
-          <p>
-          <script type="text/javascript">var _clustrmaps = {'url' : 'http://web.utk.edu/~wfeng1/', 'user' : 1108651, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2013-08-20', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/91310eaab"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/web.utk.edu-~wfeng1--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript></p>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Research</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#research-interests">Research Interests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#projects-for-fun">Projects for fun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#my-research-projects-description">My Research Projects Description</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teaching.html">Teaching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="note.html">Note</a></li>
+<li class="toctree-l1"><a class="reference internal" href="biography.html">Biography</a></li>
+</ul>
+
+            
+          
         </div>
       </div>
-    <!---------------------------------------------------------------------------------------------------->
-      <div id="content">
-        <!-- insert the page content here -->
-        <h2 id="sec1">Research Interests</h2>
-        <p>I have great interest in Numerical Partial Differential Equation. My research projects involve the following aspects: </p>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
-        <ul>
-			<div class="twocols">
-            <li>Numerical Methods For Phase-Field Equation</li>
-            <li>Geometric and Algebraic Multigrid Solver</li>
-            <li>Continuous and Discoutinuous Glerkin Method</li>
-            <li>Immersed and Adaptive Finite Element Method</li>
-            <li>Preconditioning Nonlinear Solvers</li>
-            <li>Adaptive Methods</li>
-            <li>Pseudospectral Method</li>
-            <li>Image Denoising</li>
-            </div>
-        </ul>
-         <p>My research statement can be downloaded in <a href="doc/ResearchStatement.pdf">PDF</a>.</p>
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Wenqiang Feng PhD@math</a>
+        
+      </nav>
 
-    <!---------------------------------------------------------------------------------------------------->
-    <!---------------------------------------------------------------------------------------------------->
-        <h2 id="sec2">Projects for fun</h2>
-        <ol>
-    <!---------------------------------------------------------------------------------------------------->
-    <li><h3>Triangularization on Tvols</h3></li>
-            <figure>
-                <span class="center">
-                    <img src="figures/Tvols.png" alt="tvol" width="200" height="200"/>
-                    <img src="figures/stokes_p.png" alt="p_tvols" width="200" height="200"/>
-                    <img src="figures/stokes_u.png" alt="u_tvols" width="200" height="200"/>
-                </span>
-                <figcaption class="center">Fig.1- Left: Triangularization on Tvols.
-                    Middle: The pressure of Stokes on Tvols.
-                    Right: The velocity of Stokes on Tvols. Generated by Freefem++.
-                </figcaption>
-            </figure>
-    <!---------------------------------------------------------------------------------------------------->
-      <li><h3>One in Two out Navier-Stokes flows on Tvols by Freefem++.</h3></li>
-           <span class="center"> <video id="00" width="600" height="300" controls="controls" preload="none" autoplay loop>
-                <source src="video/Tvols.mp4" type="video/mp4">
-            </video></span>
-    <!---------------------------------------------------------------------------------------------------->
-     <!--<h2 align="center"> My Research Projects Description</h2>-->
-        <h2 id="sec3"> My Research Projects Description</h2>
-        <ol>
-    <!---------------------------------------------------------------------------------------------------->
-    <li><h3 id="ac">Simulation for Allen-Cahn (AC) Euqaiton</h3></li>
-        <ol>
-	<li><h4>The Allen-Cahn Euqaiton</h4></li>
-	       <figure>
-                <span class="center">
-                    <img src="figures/ac_ch.png" alt="tvol" width="400" height="300"/>
-                </span>
-                <figcaption class="center"> The Allen-Cahn Euqaiton and Cahn-Hilliard
-                </figcaption>
-            </figure>
-        <li><h4>The process of phase separation</h4></li>
-            <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-                <source src="video/sine.mp4" type="video/mp4"></span>
-            </video>
-     	<li><h4><span lang="latex">\epsilon</span>: The width of the diffuse interface</h4></li>
-            <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-                <source src="video/ac_psLargeeps.mp4" type="video/mp4">
-		</span>
-               <!-- <figcaption class="center"> <span lang="latex">\epsilon</span>: The width of the diffuse interface.
-                </figcaption>-->
-            </video>
-            <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-		<source src="video/ac_psSmalleps.mp4" type="video/mp4">
-		</span>
-               <!-- <figcaption class="center"> <span lang="latex">\epsilon</span>: The width of the diffuse interface.
-                </figcaption>-->
-            </video>
-        </ol>
-    <!---------------------------------------------------------------------------------------------------->
-         <li><h3 id="ch">Simulation for Cahn-Hilliard (CH) Euqaiton</h3></li>
-	<ol>
-		<li><h4>The Cahn-Hilliard Euqaiton</h4></li>
-	       <figure>
-                <span class="center">
-                    <img src="figures/ac_ch.png" alt="tvol" width="400" height="300"/>
-                </span>
-                <figcaption class="center"> The Allen-Cahn Euqaiton and Cahn-Hilliard
-                </figcaption>
-            </figure>
-	<li><h4>The Cahn-Hilliard Euqaiton on irregular domain</h4></li>
-         <figure>
-             <span class="center"><img src="style/ch_10.png" alt="mesh" width="204" height="200"/><img src="style/ch_1600.png" alt="result" width="204" height="200"/></span>
-             <figcaption class="center">Fig.1- Left: Simulation result on the square domain. Right: Simulation result at T=16 on the irregular domain.</figcaption>
-         </figure>
-        <!-- <video id="10" width="700" height="200" autoplay loop>
-             <source src="video/sine.mp4" type="video/mp4">
-         </video>-->
-              	<li><h4><span lang="latex">W(\phi)</span>: double well function's minimum points indicate the phases</h4></li>
-            <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-                <source src="video/ch_p01.mp4" type="video/mp4">
-		</span>
-               <figcaption class="center"> <span lang="latex">W(\phi)=\phi^2(\phi-1)^2/4</span>.
-                </figcaption>
-            </video>
-            <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-		<source src="video/ch_pm1.mp4" type="video/mp4">
-		</span>
-               <figcaption class="center"> <span lang="latex">W(\phi)=\phi^4/4-\phi^2/2</span>
-                </figcaption>
-            </video>
-	<li><h4><span lang="latex">W(\phi)</span>: The distance ratio indicates area ratio</h4></li>
-            <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-                <source src="video/ch_halfHalf.mp4" type="video/mp4">
-		</span>
-               <figcaption class="center"> Average phase is around 0.
-                </figcaption>
-            </video>
-            <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-		<source src="video/ch_oneQuarter.mp4" type="video/mp4">
-		</span>
-               <figcaption class="center"> Average phase is around 0.5.
-                </figcaption>
-            </video>
-    <li><h4>The Cahn-Hilliard Euqaiton in 3D</h4></li>  
-                <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-		<source src="video/ch_3d2.mp4" type="video/mp4">
-		</span>
-               <figcaption class="center"> The Cahn-Hilliard Euqaiton simulation in 3D.
-                Left: surface plot; Right: iso-surface plot .
-                </figcaption>
-            </video>      
-	</ol>
-	     <h3>Related paper</h3>
-         <ul>
-            <li><b>Wenqiang Feng</b>, Steven M. Wise, and Cheng Wang. Efficient Finite-Difference Geometric Multigrid Solvers for the Cahn-Hilliard Equation, prepared.</li>
-        </ul>
-	  <!---------------------------------------------------------------------------------------------------->
-	   <li><h3 id="fch">Simulation for Functionalized Cahn-Hilliard (FCH) equation</h3></li>
-			<ol><li><h4>The  Functionalized Cahn-Hilliard (FCH) equation in 2D</h4></li>  
-				<!--<span class="center"> <video id="10" width="600" height="300" autoplay loop>
-				<source src="video/FCHsmooth.mp4" type="video/mp4">
-				</span>
-               <figcaption class="center"> Functionalized Cahn-Hilliard (FCH) equation with smooth initial data.
-                </figcaption>
-				</video> 
-				<span class="center"> <video id="10" width="600" height="300" autoplay loop>
-				<source src="video/FCHrandom.mp4" type="video/mp4">
-				</span>
-               <figcaption class="center"> Functionalized Cahn-Hilliard (FCH) equation with random initial data.
-                </figcaption>
-				</video> -->
-				<div id="wrapper"> 				
-				    <video id="home1" width="300" height="300" poster="figures/stokes_u.png" controls="controls" preload="none" autoplay loop> 
-				        <source type="video/mp4" src="video/FCHsmooth.mp4" /> 
-				    </video>
-				    <video id="home2" width="300" height="300" poster="figures/stokes_u.png" controls="controls" preload="none" autoplay loop> 
-				        <source type="video/mp4" src="video/FCHrandom.mp4" /> 
-				    </video>
-				    <div class="clear"></div> 
-				    <figcaption class="center"> Functionalized Cahn-Hilliard (FCH) equation with smooth initial data (left) and random initial data (right).
-				</div>				      
-			
-			    <li><h4>The Pearling Bifurcation</h4></li>  
-				<figure>
-             	<span class="center">
-             	<img src="figures/Mp1100.png" alt="mesh" width="204" height="200"/>
-             	<img src="figures/Sp1100.png" alt="result" width="204" height="200"/>
-             	<img src="figures/Mpearling110.png" alt="mesh" width="204" height="200"/>
-             	<img src="figures/Spearling110.png" alt="result" width="204" height="200"/></span>
-             	<figcaption class="center">Left: Adaptive Mesh. Right: Suface plot at T=0 and 110.</figcaption>
-	            </figure>			    
-				<div id="wrapper"> 				
-				    <video id="home1" width="300" height="300" poster="figures/stokes_u.png" controls="controls" preload="none" autoplay loop> 
-				        <source type="video/mp4" src="video/pearling1.mp4" /> 
-				    </video>
-				    <video id="home2" width="300" height="300" poster="figures/stokes_u.png" controls="controls" preload="none" autoplay loop> 
-				        <source type="video/mp4" src="video/pearling2.mp4" /> 
-				    </video>
-				    <div class="clear"></div> 
-				    <figcaption class="center"> Pearling Bifurcation of Functionalized Cahn-Hilliard (FCH) equation with perturbed initial data (left) and pertured circle initial data (right).
-				</div>				      
-		
 
-			    <li><h4>Bilayer structure in 3D</h4></li>  
-				<span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-				<source src="video/bilayer.mp4" type="video/mp4">
-				</span>
-               <figcaption class="center"> The Functionalized Cahn-Hilliard (FCH) equation simulation in 3D.
-                Left: iso-surface plot; Right: surface plot.
-                </figcaption>
-				</video>      
-			</ol>				     
-        <!---------------------------------------------------------------------------------------------------->
-        <h3>Related paper</h3>
-         <ul>
-            <li><b>Wenqiang Feng</b>, Steven M. Wise, and Cheng Wang. An Energy Stable Finite-Difference Scheme for Functionalized Cahn-Hilliard Equation and its Convergence Analysis, prepared.</li>
-            <li><b>Wenqiang Feng</b>, Steven M. Wise. Efficient Finite-Difference Geometric Multigrid Solver for Functionalized Cahn-Hilliard Equation, in preparation.</li>
-        </ul>
-    <!---------------------------------------------------------------------------------------------------->
-        <li><h3 id="sh">Simulation for Swift-Hohenberg (SH) equation</h3></li>
-        <figure>
-            <span class="center">
-                <img src="figures/shpfc.png" alt="tvol" width="400" height="300"/>
-            </span>
-            <figcaption class="center"> The Swift-Hohenberg Euqaiton and Phase Field Crystal Equation
-            </figcaption>
-        </figure>
-            <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-                <source src="video/sh_small.mp4" type="video/mp4"></span>
-            </video>
-            <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-            <source src="video/SH1stOrderCS04.mp4" type="video/mp4"></span>
-            </video>
-      <!---------------------------------------------------------------------------------------------------->
-        <h3>Related paper</h3>
-        <ul>
-            <li>A second order linearized convex splitting pseudospectral scheme
-                for Swift-Hohenberg Equation. preparing, 2016.</li>
-            <li>A first order linearized convex splitting pseudospectral scheme
-                for Swift-Hohenberg Equation. preparing, 2016.</li>
-        </ul>      
-    <!---------------------------------------------------------------------------------------------------->
-    	  <!---------------------------------------------------------------------------------------------------->
-    <!---------------------------------------------------------------------------------------------------->
-        <li><h3 id="pfc">Simulation for Phase Field Crystal (PFC) equation</h3></li>
-			<ol><li><h4>The Phase Field Crystal equation in 3D</h4></li>  
-				<span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-				<source src="video/pfc3d64.mp4" type="video/mp4">
-				</span>
-               <figcaption class="center"> The Phase Field Crystal equation simulation in 3D.
-                Left: iso-surface plot; Right: surface plot.
-                </figcaption>
-				</video>      
-			</ol>
-	     
-        <!---------------------------------------------------------------------------------------------------->
-        <h3>Related paper</h3>
-                <ul>
-            <li>Lixiu Dong, <b>Wenqiang Feng</b>, Cheng Wang, Steven M. Wise and Zhengru Zhang. Convergence analysis and numerical implementation of second order numerical schemes for the three-dimensional phase field crystal equation, in preparation. </li>
-        </ul>
-          <!---------------------------------------------------------------------------------------------------->
-        <li><h3 id="spfc">Simulation for Squared Phase Field Crystal (SPFC) equation</h3></li>
-			<!--<ol><li><h4>The Squared Phase Field Crystal 2D</h4></li>  
-				<span class="center"> <video id="10" width="600" height="300" autoplay loop>
-				<source src="video/SPFCline.mp4" type="video/mp4">
-				</span>
-               <figcaption class="center"> The Squared Phase Field Crystal with centeral line initial data.
-                </figcaption>
-				</video> 
-				<span class="center"> <video id="10" width="600" height="300" autoplay loop>
-				<source src="video/SPFC1.mp4" type="video/mp4">
-				</span>
-               <figcaption class="center"> The Squared Phase Field Crystal with one perturbed spot.
-                </figcaption>
-				</video>    
-				</video> 
-				<span class="center"> <video id="10" width="600" height="300" autoplay loop>
-				<source src="video/SPFC2.mp4" type="video/mp4">
-				</span>
-               <figcaption class="center"> The Squared Phase Field Crystal with two perturbed spots.
-                </figcaption>
-				</video>     
-				</video> 
-				<span class="center"> <video id="10" width="600" height="300" autoplay loop>
-				<source src="video/SPFC4.mp4" type="video/mp4">
-				</span>
-               <figcaption class="center"> The Squared Phase Field Crystal with four perturbed spots.
-                </figcaption>
-				</video> -->
-				<div id="wrapper"> 
-				    <video id="home1" width="300" height="300" poster="figures/stokes_u.png" controls="controls" preload="none" autoplay loop> 
-				        <source type="video/mp4" src="video/SPFCline.mp4" /> 
-				    </video>
-				    <video id="home2" width="300" height="300" poster="figures/stokes_u.png" controls="controls" preload="none" autoplay loop> 
-				        <source type="video/mp4" src="video/SPFC1.mp4" /> 
-				    </video>				
-				    <video id="home1" width="300" height="300" poster="figures/stokes_u.png" controls="controls" preload="none" autoplay loop> 
-				        <source type="video/mp4" src="video/SPFC2.mp4" /> 
-				    </video>
-				    <video id="home2" width="300" height="300" poster="figures/stokes_u.png" controls="controls" preload="none" autoplay loop> 
-				        <source type="video/mp4" src="video/SPFC4.mp4" /> 
-				    </video>
-				    <div class="clear"></div> 
-				    <figcaption class="center"> The Squared Phase Field Crystal with centerline, one, two and four perturbed spots.
-				</div>				     
-			</ol>
-
-        <!---------------------------------------------------------------------------------------------------->
-        <h3>Related paper</h3>
-                <ul>
-            <li><b>Wenqiang Feng</b>, Abner J. Salgado, Cheng Wang, Steven M. Wise. Preconditioned Steepest Descent Methods for some Nonlinear Elliptic Equations Involving p-Laplacian Terms. arXiv preprint arXiv:1607.01475, 2016.</li>
-        </ul>
       
-    <!---------------------------------------------------------------------------------------------------->
-        <li><h3 id="etf">Simulation for Epitaxial Thin Film (ETF)  growth model</h3></li>
- 	<span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-                <source src="video/etfSinCos.mp4" type="video/mp4">
-		</span>
-               <figcaption class="center"> Simulation for sin-cos conbination initial condition .
-                </figcaption>
-            </video>
-            <span class="center"> <video id="10" width="600" height="300" controls="controls" preload="none" autoplay loop>
-		<source src="video/etfRandom.mp4" type="video/mp4">
-		</span>
-               <figcaption class="center"> Simulation for random initial condition
-                </figcaption>
-            </video>           
-     <!---------------------------------------------------------------------------------------------------->
-        <h3>Related paper</h3>
-        <ul>
-            <li><b>Wenqiang Feng</b>, Abner J. Salgado, Cheng Wang, Steven M. Wise. Preconditioned Steepest Descent Methods for some Nonlinear Elliptic Equations Involving p-Laplacian Terms. arXiv preprint arXiv:1607.01475, 2016. </li>
-        </ul>
-    <!---------------------------------------------------------------------------------------------------->
-    <!---------------------------------------------------------------------------------------------------->
-        <li><h3 id="dwdg">Dual-Wind Discontinuous Galerkin Method</h3></li>
-        <p>The Dual-Wind Discontinuous Galerkin (DWDG) Method is one of the special Finite Element Method (FEM). The main difference from the standard FEM is that DWDG uses discontinuous discrete derivatives and the discontinuous discrete derivatives are defined from the trace operator(Fig.1).
-        <span class="center" lang="latex">
-            \mathbb{Q}_i^-(v)(x)=\left\{
-            \begin{array}{ll}
-            \displaystyle\lim_{\substack{y\in K^-\\y\to x}} v(y)~~if ~~n_e^{(i)}<0,\\
-            \displaystyle\lim_{\substack{y\in K^+\\y\to x}} v(y)~~if ~~n_e^{(i)}\geq0,
-            \end{array}
-            \right.,
-            \mathbb{Q}_i^+(v)(x)=\left\{
-            \begin{array}{ll}
-            \displaystyle\lim_{\substack{y\in K^+\\y\to x}} v(y)~~if ~~n_e^{(i)}<0,\\
-            \displaystyle\lim_{\substack{y\in K^-\\y\to x}} v(y)~~if ~~n_e^{(i)}\geq0.
-            \end{array}
-            \right.
-        </span>
-        </p>
-            <figure>
-            <span class="center"><img src="style/trace1.png" alt="trace1" width="304" height="228"/><img src="style/trace2.png" alt="trace2" width="304" height="228"/></span>
-            <figcaption class="center">Fig.2- Left: Trace value accroding to the egde unit normal vector. Right: Trace value according to the element's unit outer normal vector .</figcaption>
-            </figure>
-    <!---------------------------------------------------------------------------------------------------->
-        <h3>Related paper</h3>
-        <ul>
-            <li><b>Wenqiang Feng</b>, Thomas Lewis, and Steven Wise. Discontinuous galerkin derivative operators with applications to second order elliptic problems and stability. Prepared, 2014.</li>
-            <li><b>Wenqiang Feng</b>, Thomas Lewis. <a href="doc/dwdg_implement.pdf">Dual-Wind Discontinuous Galerkin Method Implementation Details</a>. Project report, 2014.</li>
-        </ul>
-    <!---------------------------------------------------------------------------------------------------->
-    <!---------------------------------------------------------------------------------------------------->
-        <li><h3 id="ifem">Immersed Finite Element Method</h3></li>
-        <figure>
-            <span class="center"><img src="style/ifebasis.png" alt="ife" width="304" height="228"/></span>
-            <figcaption class="center">Fig.3-Above: Piecewise linear basis function for Immersed Finite Element.
-                Bottom: standard Finite Element basis.
-            </figcaption>
-        <figure>
-        <h3>Related paper</h3>
-        <ul>
-            <li><b>Wenqiang Feng</b>, Xiaoming He, Yanping Lin, and Xu Zhang.<a href="http://www.global-sci.com/readabs.php?vol=15&page=1045&issue=4&ppage=1067&year=2014"> Immersed fnite element method for interface problems with algebraic multigrid solver</a>. Communications in Computational
-                Physics, 15:1045-1067, 2014.</li>
-            <li><b>Wenqiang Feng</b>. <a href="https://mospace.umsystem.edu/xmlui/bitstream/handle/10355/36517/Feng_2013.pdf?sequence=1">Immersed finite element method for interface problems with algebraic
-                multigrid solver</a>. Master Thesis, 2013.</li>
-        </ul>
-        <!---------------------------------------------------------------------------------------------------->
-        <!---------------------------------------------------------------------------------------------------->
-        <li><h3 id="mg">Geometric and Algebraic Multigrid Solver</h3></li>
-        <figure>
-            <span class="center"><img src="style/tggrid.png" alt="tggrid" width="304" height="228"/></span>
-            <figcaption class="center">Fig.4-Mesh on the fine and coarse grid of the two-grid method in 2D.</figcaption>
-            <span class="center"><img src="style/mggrid.png" alt="mggrid" width="304" height="228"/></span>
-            <figcaption class="center">Fig.5- Mesh on the fine and coarse grid of the multigrid method in 2D.</figcaption>
-        </figure>
-        <h3>Related paper</h3>
-        <ul>
-            <li><b>Wenqiang Feng</b>, Thomas Lewis, and Steven Wise. Dual-Wind Discontinuous Glerkin Method with Multigrid Solver. Preparing, 2014.</li>
-            <li><b>Wenqiang Feng</b>, Xiaoming He, Yanping Lin, and Xu Zhang. <a href="http://www.global-sci.com/readabs.php?vol=15&page=1045&issue=4&ppage=1067&year=2014">Immersed fnite element method for interface problems with algebraic multigrid solver</a>. Communications in Computational
-                Physics, 15:1045-1067, 2014.</li>
-            <li><b>Wenqiang Feng</b>. <a href="https://mospace.umsystem.edu/xmlui/bitstream/handle/10355/36517/Feng_2013.pdf?sequence=1">Immersed finite element method for interface problems with algebraic
-                multigrid solver</a>. Master Thesis, 2013.</li>
-        </ul>
-        <!---------------------------------------------------------------------------------------------------->
-        <!---------------------------------------------------------------------------------------------------->
-        <li><h3 id="afem">Adaptive Finite Element Method</h3></li>
-        <figure>
-            <span class="center"><img src="figures/afem1d.gif" alt="tggrid" width="504" height="250"/></span>
-            <figcaption class="center">Fig.6-The Adaptive Finite Element Method for  1D interface problem (gif).</figcaption>
-        </figure>
-        <!--
-        <figure>
-            <span class="center"><img src="figures/adaptive2d.gif" alt="tggrid" width="504" height="150"/></span>
-            <figcaption class="center">Fig.7-The Adaptive Finite Element Method for Poisson in 2D (gif).</figcaption>
-        </figure>
-        <p>My Adaptive Finite Element Method Projects only involoved with Course Projects untill now. </p>
-        </figure>
-        <video id="0" width="800" height="225" autoplay loop>
-            <source src="video/AFEM2D.mp4" type="video/mp4">
-        </video>
-        <h3>Related paper</h3>
-        <ul>
-            <li>Wenqiang Feng. 1D Adaptive Finite Element Method. Course Project Report, 2014.</li>
-            <li>Wenqiang Feng.<a href="doc/ReportMath673.pdf">The Adaptive Finite Element Method for Poisson Equation with Algebraic Multigrid Solver</a>. Course Project Report, 2013.</li>
-        </ul>
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
 
-      </ol>-->
-      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Research</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/research.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="research">
+<span id="id1"></span><h1>Research<a class="headerlink" href="#research" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="research-interests">
+<h2>Research Interests<a class="headerlink" href="#research-interests" title="Permalink to this headline">¶</a></h2>
+<p>I have great interest in Numerical Partial Differential Equation. My research projects involve the following aspects:</p>
+<ul class="simple">
+<li>Data Mining and Machine Learning</li>
+<li>Big Data Analytics</li>
+<li>Numerical Methods For Phase-Field Equation</li>
+<li>Geometric and Algebraic Multigrid Solver</li>
+<li>Continuous and Discoutinuous Glerkin Method</li>
+<li>Immersed and Adaptive Finite Element Method</li>
+<li>Preconditioning Nonlinear Solvers</li>
+<li>Adaptive Methods</li>
+<li>Pseudospectral Method</li>
+<li>Image Denoising</li>
+</ul>
+<p>My research statement can be downloaded in &#8216;PDF&#8217;.</p>
+</div>
+<div class="section" id="projects-for-fun">
+<h2>Projects for fun<a class="headerlink" href="#projects-for-fun" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="my-research-projects-description">
+<h2>My Research Projects Description<a class="headerlink" href="#my-research-projects-description" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Simulation for Allen-Cahn (AC) Euqaiton</li>
+<li>Simulation for Cahn-Hilliard (CH) Euqaiton</li>
+<li>Simulation for Functionalized Cahn-Hilliard (FCH) equation</li>
+<li>Simulation for Swift-Hohenberg (SH) equation</li>
+<li>Simulation for Phase Field Crystal (PFC) equation</li>
+<li>Simulation for Squared Phase Field Crystal (SPFC) equation</li>
+<li>Simulation for Epitaxial Thin Film (ETF) growth model</li>
+<li>Dual-Wind Discontinuous Galerkin Method</li>
+<li>Immersed Finite Element Method</li>
+<li>Geometric and Algebraic Multigrid Solver</li>
+<li>Adaptive Finite Element Method</li>
+</ol>
+<p>TO DO .....</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="publications.html" class="btn btn-neutral float-right" title="Publications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
-     <div id="footer">
-      <p>Copyright &copy; Wenqiang Feng| <a href="http://www.html5webtemplates.co.uk">CSS from HTML5webtemplates.co.uk</a></p>
-      <p> Last updated:
-         <!--<script type="text/javascript">
-          var d = new Date()
-          document.write(d.getMonth() + 1)
-          document.write(".")
-          document.write(d.getDate())
-          document.write(".")
-          document.write(d.getFullYear())
-          </script>-->
-         <script>
-             document.write(document.lastModified);
-        </script>
-      </p>
-    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Wenqiang Feng.
+      Last updated on Sep 23, 2017.
+
+    </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'v1.01',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ?
+              'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+
+
 </body>
 </html>
