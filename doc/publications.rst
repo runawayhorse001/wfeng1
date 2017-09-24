@@ -18,7 +18,7 @@ Journal papers
 
 #. **Wenqiang Feng**, Cheng Wang, Steven M. Wise and Zhengru Zhang. A Second-Order Energy Stable Backward Differentiation Formula Method for the Epitaxial Thin Film Equation with Slope Selection, in preparation.
 
-#. **Wenqiang Feng**, Zhenlin Guo, John Lowengrub, Steven M. Wise. Mass-Conservative Cell-Centered Finite Difference Methods and an Efficient Multigrid Solver for the Diffusion Equation on Block-Structured, Locally Cartesian Adaptive Grids, in preparation.
+#. **Wenqiang Feng**, Zhenlin Guo, John Lowengrub, Steven M. Wise. Mass-Conservative Cell-Centered Finite Difference Methods and an Efficient Multigrid Solver for the Diffusion Equation on Block-Structured, Locally Cartesian Adaptive Grids, J. Comput. Phys., Accept.
 
 #. Lixiu Dong, **Wenqiang Feng**, Cheng Wang, Steven M. Wise and Zhengru Zhang. Convergence analysis and numerical implementation of a second order numerical schemes for the three-dimensional phase field crystal equation, arXiv preprint arXiv:1611.06288, 2016.
 
